@@ -274,8 +274,7 @@ def eval_model(model, data_loader, loss_fn, device, n_examples):
 #     torch.save(model.state_dict(), 'best_model_state.bin')
 #     best_accuracy = val_acc
 
-hist={}
-hist['train_acc']=[y.cpu() for y in history['train_acc']]
+hist = {'train_acc': [y.cpu() for y in history['train_acc']]}
 hist['val_acc']=[y.cpu() for y in history['val_acc']]
 #hist['train_loss']=[y.cpu() for y in history['train_loss']]
 #hist['val_loss']=[y.cpu() for y in history['val_loss']]
